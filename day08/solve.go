@@ -1,4 +1,4 @@
-package day8
+package day08
 
 func SolvePuzzle1(input string) int {
 	// TODO: solve puzzle 1
