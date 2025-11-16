@@ -14,6 +14,6 @@ func TestSolvePuzzle1(t *testing.T) {
 
 func TestSolvePuzzle2(t *testing.T) {
 	input := utils.ReadInput()
-	result := day03.SolvePuzzle1(input)
+	result := day03.SolvePuzzle2(input)
 	t.Log(result)
 }
