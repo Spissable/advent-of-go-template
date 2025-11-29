@@ -5,18 +5,19 @@ import (
 	"os"
 	"path/filepath"
 	"runtime"
+	"testing"
 )
 
-func ReadInput() string {
+func ReadInput(t *testing.T) string {
 	_, file, _, ok := runtime.Caller(1)
 	if !ok {
-		panic("Failed to get caller information")
+		t.Fatal("Failed to get caller information. Can't determine which day to load.")
 	}
 
 	filePath := fmt.Sprintf("%s/input.txt", filepath.Dir(file))
 	content, err := os.ReadFile(filePath)
 	if err != nil {
-		panic("Input file not found. Make sure to run `make init` to complete the one-time setup.")
+		t.Fatal("Input file not found. Make sure to run `make init` to complete the one-time setup.")
 	}
 
 	return string(content)
