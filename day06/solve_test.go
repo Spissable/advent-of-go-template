@@ -9,11 +9,11 @@ import (
 func TestSolvePuzzle1(t *testing.T) {
 	input := utils.ReadInput()
 	result := day06.SolvePuzzle1(input)
-	t.Log(result)
+	utils.LogResult(t, result)
 }
 
 func TestSolvePuzzle2(t *testing.T) {
 	input := utils.ReadInput()
 	result := day06.SolvePuzzle2(input)
-	t.Log(result)
+	utils.LogResult(t, result)
 }
