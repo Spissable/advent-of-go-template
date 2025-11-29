@@ -16,7 +16,7 @@ func ReadInput() string {
 	filePath := fmt.Sprintf("%s/input.txt", filepath.Dir(file))
 	content, err := os.ReadFile(filePath)
 	if err != nil {
-		panic(fmt.Sprintf("File not found for path: %s", err.Error()))
+		panic("Input file not found. Make sure to run `make init` to complete the one-time setup.")
 	}
 
 	return string(content)
