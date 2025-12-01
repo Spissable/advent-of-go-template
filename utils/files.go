@@ -1,6 +1,7 @@
 package utils
 
 import (
+	"bytes"
 	"fmt"
 	"os"
 	"path/filepath"
@@ -20,5 +21,5 @@ func ReadInput(t *testing.T) string {
 		t.Fatal("Input file not found. Make sure to run `make init` to complete the one-time setup.")
 	}
 
-	return string(content)
+	return string(bytes.TrimSpace(content))
 }
